@@ -1,0 +1,42 @@
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.header {
+  background: #ffffff;
+  height: 3rem;
+  padding: 0 2rem;
+}
+
+.header-left > img {
+  vertical-align: middle;
+}
+
+a {
+  margin: 0 7rem;
+  position: relative;
+  top: 0.4rem;
+}
+
+.caret {
+  position: relative;
+  top: 0.4rem;
+}
+
+.header-left span {
+  vertical-align: bottom;
+}
+
+.join-now-btn {
+  width: 9rem;
+  height: 2rem;
+  color: #ffffff;
+  background: dodgerblue;
+  border: none;
+  border-radius: 1rem;
+  font-weight: 700;
+  position: relative;
+  top: 0.2rem;
+}

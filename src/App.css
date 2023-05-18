@@ -1,0 +1,287 @@
+.App {
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.container {
+  background: url("./assets/back-ground.svg");
+  height: 65vw;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 3rem;
+}
+
+.left-content {
+  width: 50%;
+  text-align: left;
+  padding-right: 1rem;
+}
+
+.left-content > h2 {
+  font-size: 3rem;
+}
+
+.right-content {
+  color: #000000;
+  width: 50%;
+  padding-left: 1rem;
+}
+
+.right-content h3 {
+  text-align: center;
+}
+
+.steps {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: #0096ff;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  margin: auto;
+}
+
+.steps-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+}
+
+.panel {
+  width: 75%;
+  background: #ffffff;
+  margin: 2rem 0 0 2rem;
+  padding: 1rem;
+  border-radius: 0.3rem;
+}
+
+.price-card {
+  border: 2px solid grey;
+  border-radius: 0.4rem;
+  padding: 0.5rem;
+  min-height: 2.5rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.checbox-container > div:first-child {
+  display: flex;
+  align-items: center;
+}
+
+#actual-price {
+  color: #ffffff;
+}
+
+#actual-price-line-through {
+  text-decoration: line-through;
+  color: #ff0000;
+}
+
+#current-price {
+  color: #0096ff;
+}
+
+.highlight-word {
+  color: #0096ff;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1.5rem;
+}
+
+ul > li {
+  padding: 1rem 0;
+}
+
+ul > li > div {
+  display: flex;
+}
+
+.points {
+  display: flex;
+  align-items: center;
+}
+
+.points > div {
+  padding-left: 2rem;
+}
+
+.header-left span {
+  margin: 0 2rem;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.checbox-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: black;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Hide the browser's default radio button */
+.checbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+.recommended-label {
+  position: absolute;
+  top: -9px;
+  font-size: 0.8rem;
+  background: #47ba68;
+  padding: 0.2rem 1rem;
+  color: #ffffff;
+}
+
+.offer-expired-label {
+  position: absolute;
+  top: -9px;
+  font-size: 0.8rem;
+  background: #f77171;
+  padding: 0.2rem 1rem;
+  color: #ffffff;
+}
+/* On mouse-over, add a grey background color */
+.checbox-container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.checbox-container input:checked ~ .checkmark {
+  background-color: #47ba68;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.checbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.checbox-container .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+.limited-time-offer {
+  background: linear-gradient(
+    135deg,
+    rgba(222, 67, 19, 0.2) 0%,
+    rgba(222, 67, 19, 0.2) 0.75%,
+    rgba(222, 67, 19, 0.2) 2.92%,
+    rgba(222, 68, 20, 0.2) 6.37%,
+    rgba(223, 69, 21, 0.2) 10.97%,
+    rgba(223, 72, 22, 0.2) 16.59%,
+    rgba(224, 75, 24, 0.2) 23.1%,
+    rgba(225, 80, 27, 0.2) 30.37%,
+    rgba(227, 86, 31, 0.2) 38.27%,
+    rgba(229, 94, 36, 0.2) 46.66%,
+    rgba(231, 104, 43, 0.2) 55.41%,
+    rgba(235, 117, 51, 0.2) 64.39%,
+    rgba(238, 132, 60, 0.2) 73.47%,
+    rgba(243, 149, 71, 0.2) 82.52%,
+    rgba(248, 169, 84, 0.2) 91.41%,
+    rgba(254, 193, 99, 0.2) 100%
+  );
+  border-radius: 0.5rem;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #de4313;
+  color: #de4313;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.form-buttons {
+  width: 48%;
+  height: 2.5rem;
+}
+
+.form-buttons:first-child {
+  border: 2px solid #de4313;
+  background: #ffffff;
+  border-radius: 0.2rem;
+  color: #de4313;
+  font-weight: 700;
+}
+
+.form-buttons:last-child {
+  background: #47ba68;
+  border: none;
+  border-radius: 0.2rem;
+  color: #ffffff;
+  font-weight: 700;
+}
